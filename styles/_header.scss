@@ -1,0 +1,40 @@
+@import "./colors";
+@import "./media-queries";
+
+.loading-page {
+  width: 100vw;
+  height: 100vh;
+  background: $black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition: all 750ms ease;
+
+  img {
+    width: 200px;
+  }
+
+  .counter-container {
+    height: 8rem;
+    overflow: hidden;
+    .counter {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(-0%);
+      transition: all 250ms ease;
+      p {
+        font-size: 8rem;
+        color: $white;
+      }
+    }
+  }
+
+  .copyright {
+    color: $white;
+    font-size: 2rem;
+    text-align: center;
+  }
+}

@@ -1,0 +1,70 @@
+@import "./styles/colors";
+@import "./styles/media-queries";
+@import "./styles/footer";
+@import "./styles/main";
+@import "./styles/header";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+body {
+  background: $white;
+  overflow-x: hidden;
+  overflow-y: scroll; /* Add the ability to scroll */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.cursor {
+  /*   pointer-events: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: absolute;
+  transition-timing-function: ease-out;
+  animation: cursorAnimation 0.6s infinite alternate; */
+
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  top: var(--y, 0);
+  left: var(--x, 0);
+  transform: translate(-50%, -50%);
+  z-index: 2000;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  animation: cursorAnimation 2s infinite forwards alternate;
+
+  @include mini {
+    display: none;
+  }
+}
+
+@keyframes cursorAnimation {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1) rotate(360deg);
+  }
+  100% {
+    transform: scale(0.95) rotate(00deg);
+  }
+}
