@@ -7,12 +7,16 @@
   background: $black;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  transition: all 750ms ease;
+  transition: all 1250ms ease;
 
   img {
     width: 200px;
+
+    @include phone {
+      width: 100px;
+    }
   }
 
   .counter-container {
@@ -36,5 +40,9 @@
     color: $white;
     font-size: 2rem;
     text-align: center;
+
+    @include phone {
+      font-size: 1rem;
+    }
   }
 }

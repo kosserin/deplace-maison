@@ -30,16 +30,12 @@ body {
   }
 }
 
-.cursor {
-  /*   pointer-events: none;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  position: absolute;
-  transition-timing-function: ease-out;
-  animation: cursorAnimation 0.6s infinite alternate; */
+.html-overflow-hidden {
+  overflow: hidden;
+}
 
-  position: absolute;
+.cursor {
+  /*   position: absolute;
   width: 40px;
   height: 40px;
   background: #fff;
@@ -50,8 +46,20 @@ body {
   z-index: 2000;
   mix-blend-mode: difference;
   pointer-events: none;
-  animation: cursorAnimation 2s infinite forwards alternate;
-
+  animation: cursorAnimation 2s infinite forwards alternate; */
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: transform 350ms ease;
+  transform: translate(-50%, -50%) scale(0.3);
+  transition-delay: 100ms;
+  z-index: 1000;
+  animation: cursorAnimation 1s infinite forwards alternate;
   @include mini {
     display: none;
   }
@@ -59,12 +67,12 @@ body {
 
 @keyframes cursorAnimation {
   0% {
-    transform: scale(1) rotate(0deg);
+    transform: translate(-50%, -50%) scale(1) rotate(5deg);
   }
   50% {
-    transform: scale(1) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(15deg);
   }
   100% {
-    transform: scale(0.95) rotate(00deg);
+    transform: translate(-50%, -50%) scale(0.95) rotate(5deg);
   }
 }

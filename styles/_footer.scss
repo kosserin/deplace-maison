@@ -6,9 +6,13 @@ footer {
   z-index: 100 !important;
   background: rgba(0, 0, 0, 0.01);
   width: 100vw;
-  padding: 10vh 5vw 5vh 5vw;
+  padding: 10vh 2.5vw 5vh 2.5vw;
   position: relative;
   height: fit-content;
+
+  @include mini {
+    padding: 10vh 5vw 5vh 5vw;
+  }
 
   .first-footer-row {
     display: flex;
@@ -31,12 +35,12 @@ footer {
         }
       }
 
-      i {
-        font-size: 3rem;
+      img {
+        width: 3rem;
         margin-top: 10px;
 
         @include mini {
-          font-size: 2.5rem;
+          width: 2.5rem;
         }
 
         @include phone {
@@ -124,11 +128,16 @@ footer {
         @include mini {
           font-size: 0.6rem;
         }
+
+        @include phone {
+          font-size: 0.5rem;
+        }
       }
       .email-submit-container {
         display: flex;
         align-items: flex-end;
         border-bottom: 1px solid $black;
+        justify-content: space-between;
 
         input {
           border: none;
@@ -143,7 +152,10 @@ footer {
           }
 
           @include phone {
-            min-width: 100px;
+            min-width: 80px;
+            width: 80px;
+            max-width: 80px;
+            padding: 0.25rem 0.25rem 0.25rem 0;
           }
 
           &::placeholder {
@@ -153,6 +165,11 @@ footer {
 
             @include mini {
               font-size: 0.75rem;
+            }
+
+            @include phone {
+              font-size: 0.5rem;
+              font-weight: 500;
             }
           }
         }
@@ -170,6 +187,11 @@ footer {
             font-size: 0.75rem;
             padding: 0.5rem 0 0.5rem 0.5rem;
           }
+
+          @include phone {
+            font-size: 0.5rem;
+            padding: 0.25rem 0 0.25rem 0.25rem;
+          }
         }
       }
     }
@@ -185,7 +207,7 @@ footer {
       }
 
       @include phone {
-        font-size: 0.6rem;
+        font-size: 0.5rem;
       }
     }
 
@@ -197,7 +219,7 @@ footer {
       }
 
       @include phone {
-        font-size: 0.6rem;
+        font-size: 0.5rem;
       }
     }
 
@@ -217,6 +239,10 @@ footer {
 
       a:first-of-type {
         margin-right: 15px;
+
+        @include phone {
+          margin-right: 5px;
+        }
       }
     }
   }

@@ -4,10 +4,53 @@ const loadingPage = document.querySelector('.loading-page');
 const loadingPageImage = document.querySelector('.loading-page img');
 const loadingPageCopyright = document.querySelector('.loading-page .copyright');
 const burger = document.querySelector('.burger');
-document.body.onmousemove = function(e) {
+/* document.body.onmousemove = function(e) {
     document.documentElement.style.setProperty('--x', (e.clientX+window.scrollX) + 'px');
     document.documentElement.style.setProperty('--y', (e.clientY+window.scrollY) + 'px');
-  }
+  } */
+  /* THIS IS CUSTOM CURSOR MIX-BLEND HOVERING EFFECT */
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var cursor = document.querySelector(".cursor");
+    var links = document.querySelectorAll("a");
+    var initCursor = false;
+  
+    for (var i = 0; i < links.length; i++) {
+      var selfLink = links[i];
+  
+      selfLink.addEventListener("mouseover", function() {
+        cursor.classList.add("custom-cursor--link");
+      });
+      selfLink.addEventListener("mouseout", function() {
+        cursor.classList.remove("custom-cursor--link");
+      });
+    }
+  
+    window.onmousemove = function(e) {
+      var mouseX = e.clientX;
+      var mouseY = e.clientY;
+  
+      if (!initCursor) {
+        // cursor.style.opacity = 1;
+        TweenLite.to(cursor, 0.3, {
+          opacity: 1
+        });
+        initCursor = true;
+      }
+  
+      TweenLite.to(cursor, 0, {
+        top: mouseY + "px",
+        left: mouseX + "px"
+      });
+    };
+  
+    window.onmouseout = function(e) {
+      TweenLite.to(cursor, 0.3, {
+        opacity: 0
+      });
+      initCursor = false;
+    };
+  });
+  /*  */
 const init = () =>{
     let counter = 0;
     let size = 160;
@@ -35,6 +78,7 @@ burger.addEventListener('click', () =>{
     document.querySelector('.logo').classList.toggle('white-color');
     document.querySelector('.cart').classList.toggle('white-color');
     document.querySelector('nav h2').classList.toggle('before-expand');
+    document.querySelector('html').classList.toggle('html-overflow-hidden');
 })
 
 /* INK-MODE FIXED OR NOT BY SCROLL UP OR SCROLL DOWN */
