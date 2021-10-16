@@ -487,7 +487,7 @@
 
 @media screen and (max-width: 600px) {
   .main-page nav .social-container {
-    bottom: 8vh;
+    bottom: 15vh;
   }
 }
 
@@ -510,7 +510,7 @@
 
 @media screen and (max-width: 600px) {
   .main-page nav .nav-ink-mode {
-    bottom: 8vh;
+    bottom: 15vh;
   }
 }
 
@@ -1182,8 +1182,8 @@
 
 @media screen and (max-width: 600px) {
   .main-page main #reviews .comments {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
   }
 }
 
@@ -1206,7 +1206,7 @@
 
 @media screen and (max-width: 600px) {
   .main-page main #reviews .comment {
-    height: 110px;
+    height: 80px;
   }
 }
 
@@ -1229,7 +1229,7 @@
 
 @media screen and (max-width: 600px) {
   .main-page main #reviews .comment p {
-    margin: 0 0 8vh 0;
+    margin: 0 0 0vh 0;
     font-size: 0.65rem;
   }
 }
@@ -1244,8 +1244,8 @@
 }
 
 .main-page main #reviews .comment .move-to-minus-one-hundred {
-  -webkit-transform: translateY(-165%);
-          transform: translateY(-165%);
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
   -webkit-transition: -webkit-transform 300ms ease;
   transition: -webkit-transform 300ms ease;
   transition: transform 300ms ease;
@@ -2311,7 +2311,7 @@ footer .second-footer-row .social-footer-container a:first-of-type {
 
 @media screen and (max-width: 600px) {
   .main-page nav .social-container {
-    bottom: 8vh;
+    bottom: 15vh;
   }
 }
 
@@ -2334,7 +2334,7 @@ footer .second-footer-row .social-footer-container a:first-of-type {
 
 @media screen and (max-width: 600px) {
   .main-page nav .nav-ink-mode {
-    bottom: 8vh;
+    bottom: 15vh;
   }
 }
 
@@ -3006,8 +3006,8 @@ footer .second-footer-row .social-footer-container a:first-of-type {
 
 @media screen and (max-width: 600px) {
   .main-page main #reviews .comments {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
   }
 }
 
@@ -3030,7 +3030,7 @@ footer .second-footer-row .social-footer-container a:first-of-type {
 
 @media screen and (max-width: 600px) {
   .main-page main #reviews .comment {
-    height: 110px;
+    height: 80px;
   }
 }
 
@@ -3053,7 +3053,7 @@ footer .second-footer-row .social-footer-container a:first-of-type {
 
 @media screen and (max-width: 600px) {
   .main-page main #reviews .comment p {
-    margin: 0 0 8vh 0;
+    margin: 0 0 0vh 0;
     font-size: 0.65rem;
   }
 }
@@ -3068,8 +3068,8 @@ footer .second-footer-row .social-footer-container a:first-of-type {
 }
 
 .main-page main #reviews .comment .move-to-minus-one-hundred {
-  -webkit-transform: translateY(-165%);
-          transform: translateY(-165%);
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
   -webkit-transition: -webkit-transform 300ms ease;
   transition: -webkit-transform 300ms ease;
   transition: transform 300ms ease;

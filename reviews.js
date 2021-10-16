@@ -12,6 +12,8 @@ interval = setInterval(() => {
             comments.classList.remove('move-to-zero');
             comments.classList.add('move-to-minus-one-hundred');
         });
+        comments[0].style.opacity = '0';
+        comments[1].style.opacity = '1';
     } else{
         authors.forEach(author => {
             author.classList.add('move-to-zero');
@@ -21,6 +23,8 @@ interval = setInterval(() => {
             comment.classList.add('move-to-zero');
             comment.classList.remove('move-to-minus-one-hundred');
         });
+        comments[0].style.opacity = '1';
+        comments[1].style.opacity = '0';
     }
     counter++;
 

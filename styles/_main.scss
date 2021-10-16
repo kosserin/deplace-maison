@@ -359,7 +359,7 @@
       margin-bottom: 2vh;
 
       @include phone {
-        bottom: 8vh;
+        bottom: 15vh;
       }
 
       a {
@@ -382,7 +382,7 @@
       right: 15vw;
 
       @include phone {
-        bottom: 8vh;
+        bottom: 15vh;
       }
 
       a {
@@ -793,7 +793,7 @@
         transform: translateY(25%);
 
         @include phone {
-          transform: translateY(0);
+          transform: translateY(0%);
         }
       }
 
@@ -809,7 +809,7 @@
         flex-direction: column;
 
         @include phone {
-          height: 110px;
+          height: 80px;
         }
 
         p {
@@ -826,7 +826,7 @@
           }
 
           @include phone {
-            margin: 0 0 8vh 0;
+            margin: 0 0 0vh 0;
             font-size: 0.65rem;
           }
         }
@@ -836,7 +836,7 @@
         }
 
         .move-to-minus-one-hundred {
-          transform: translateY(-165%);
+          transform: translateY(-100%);
           transition: transform 300ms ease;
         }
       }
