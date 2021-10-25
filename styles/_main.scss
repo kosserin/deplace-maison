@@ -713,7 +713,7 @@
     #reviews {
       position: relative;
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
       width: 700px;
       min-width: 50vw;
       margin: 20vh 5vw 20vh auto;
@@ -726,19 +726,28 @@
         margin: 8vh 5vw 8vh auto;
       }
 
+      @include phone {
+        width: 95vw;
+        margin: 8vh 0 8vh 5vw;
+      }
+
       img {
         width: 110px;
         position: absolute;
         top: 50%;
         left: 0;
         transform: translateY(-50%);
+
+        @include fold {
+          width: 80px;
+        }
       }
 
       .authors {
         position: relative;
         z-index: 4;
         min-width: 230px;
-        height: 2.5rem;
+        height: 2.6rem;
         overflow: hidden;
         transition: all 350ms;
         display: flex;
@@ -749,12 +758,12 @@
         }
 
         @include phone {
-          min-width: 130px;
+          min-width: 110px;
           height: 1.4rem;
         }
 
         @include phoneS {
-          min-width: 100px;
+          min-width: 90px;
           height: 1rem;
         }
 
@@ -790,10 +799,15 @@
       }
 
       .comments {
-        transform: translateY(25%);
+        position: relative;
+        transform: translateY(30px);
 
         @include phone {
-          transform: translateY(0%);
+          margin-left: 10px;
+        }
+
+        @include fold {
+          margin-left: 0;
         }
       }
 
@@ -801,33 +815,31 @@
       .comment {
         position: relative;
         z-index: 4;
-        min-width: 200px;
-        height: 80px;
+        width: 350px;
+        min-width: 30vw;
+        height: 120px;
         overflow: hidden;
         transition: all 350ms;
         display: flex;
         flex-direction: column;
 
         @include phone {
-          height: 80px;
+          width: 220px;
         }
 
         p {
-          position: relative;
-          font-size: 1rem;
-          color: $black;
-          font-weight: 500;
-          height: 100%;
-          margin: 0 0 5vh 0;
+          position: absolute;
+          height: 120px;
+          font-size: clamp(0.7rem, 1vw+1, 1vw);
 
-          @include mini {
-            transition-delay: 500ms;
-            font-size: 0.9rem;
+          &.first-comment {
+            top: 0;
+            left: 0;
           }
 
-          @include phone {
-            margin: 0 0 0vh 0;
-            font-size: 0.65rem;
+          &.second-comment {
+            top: 100%;
+            left: 0;
           }
         }
         .move-to-zero {

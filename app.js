@@ -66,7 +66,7 @@ const init = () =>{
             counter++;
             container.style.transform = 'translateY('+(-size*counter)+'px';
         }
-    }, 500);
+    }, 00);
 }
 window.addEventListener('load', init);
 

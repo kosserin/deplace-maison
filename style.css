@@ -1061,9 +1061,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   width: 700px;
   min-width: 50vw;
   margin: 20vh 5vw 20vh auto;
@@ -1083,6 +1083,13 @@
   }
 }
 
+@media screen and (max-width: 600px) {
+  .main-page main #reviews {
+    width: 95vw;
+    margin: 8vh 0 8vh 5vw;
+  }
+}
+
 .main-page main #reviews img {
   width: 110px;
   position: absolute;
@@ -1092,11 +1099,17 @@
           transform: translateY(-50%);
 }
 
+@media screen and (max-width: 320px) {
+  .main-page main #reviews img {
+    width: 80px;
+  }
+}
+
 .main-page main #reviews .authors {
   position: relative;
   z-index: 4;
   min-width: 230px;
-  height: 2.5rem;
+  height: 2.6rem;
   overflow: hidden;
   -webkit-transition: all 350ms;
   transition: all 350ms;
@@ -1117,14 +1130,14 @@
 
 @media screen and (max-width: 600px) {
   .main-page main #reviews .authors {
-    min-width: 130px;
+    min-width: 110px;
     height: 1.4rem;
   }
 }
 
 @media screen and (max-width: 360px) {
   .main-page main #reviews .authors {
-    min-width: 100px;
+    min-width: 90px;
     height: 1rem;
   }
 }
@@ -1176,22 +1189,29 @@
 }
 
 .main-page main #reviews .comments {
-  -webkit-transform: translateY(25%);
-          transform: translateY(25%);
+  position: relative;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
 }
 
 @media screen and (max-width: 600px) {
   .main-page main #reviews .comments {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .main-page main #reviews .comments {
+    margin-left: 0;
   }
 }
 
 .main-page main #reviews .comment {
   position: relative;
   z-index: 4;
-  min-width: 200px;
-  height: 80px;
+  width: 350px;
+  min-width: 30vw;
+  height: 120px;
   overflow: hidden;
   -webkit-transition: all 350ms;
   transition: all 350ms;
@@ -1206,32 +1226,24 @@
 
 @media screen and (max-width: 600px) {
   .main-page main #reviews .comment {
-    height: 80px;
+    width: 220px;
   }
 }
 
 .main-page main #reviews .comment p {
-  position: relative;
-  font-size: 1rem;
-  color: #141414;
-  font-weight: 500;
-  height: 100%;
-  margin: 0 0 5vh 0;
+  position: absolute;
+  height: 120px;
+  font-size: clamp(0.7rem, 2vw, 1vw);
 }
 
-@media screen and (max-width: 970px) {
-  .main-page main #reviews .comment p {
-    -webkit-transition-delay: 500ms;
-            transition-delay: 500ms;
-    font-size: 0.9rem;
-  }
+.main-page main #reviews .comment p.first-comment {
+  top: 0;
+  left: 0;
 }
 
-@media screen and (max-width: 600px) {
-  .main-page main #reviews .comment p {
-    margin: 0 0 0vh 0;
-    font-size: 0.65rem;
-  }
+.main-page main #reviews .comment p.second-comment {
+  top: 100%;
+  left: 0;
 }
 
 .main-page main #reviews .comment .move-to-zero {
@@ -2885,9 +2897,9 @@ footer .second-footer-row .social-footer-container a:first-of-type {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   width: 700px;
   min-width: 50vw;
   margin: 20vh 5vw 20vh auto;
@@ -2907,6 +2919,13 @@ footer .second-footer-row .social-footer-container a:first-of-type {
   }
 }
 
+@media screen and (max-width: 600px) {
+  .main-page main #reviews {
+    width: 95vw;
+    margin: 8vh 0 8vh 5vw;
+  }
+}
+
 .main-page main #reviews img {
   width: 110px;
   position: absolute;
@@ -2916,11 +2935,17 @@ footer .second-footer-row .social-footer-container a:first-of-type {
           transform: translateY(-50%);
 }
 
+@media screen and (max-width: 320px) {
+  .main-page main #reviews img {
+    width: 80px;
+  }
+}
+
 .main-page main #reviews .authors {
   position: relative;
   z-index: 4;
   min-width: 230px;
-  height: 2.5rem;
+  height: 2.6rem;
   overflow: hidden;
   -webkit-transition: all 350ms;
   transition: all 350ms;
@@ -2941,14 +2966,14 @@ footer .second-footer-row .social-footer-container a:first-of-type {
 
 @media screen and (max-width: 600px) {
   .main-page main #reviews .authors {
-    min-width: 130px;
+    min-width: 110px;
     height: 1.4rem;
   }
 }
 
 @media screen and (max-width: 360px) {
   .main-page main #reviews .authors {
-    min-width: 100px;
+    min-width: 90px;
     height: 1rem;
   }
 }
@@ -3000,22 +3025,29 @@ footer .second-footer-row .social-footer-container a:first-of-type {
 }
 
 .main-page main #reviews .comments {
-  -webkit-transform: translateY(25%);
-          transform: translateY(25%);
+  position: relative;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
 }
 
 @media screen and (max-width: 600px) {
   .main-page main #reviews .comments {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .main-page main #reviews .comments {
+    margin-left: 0;
   }
 }
 
 .main-page main #reviews .comment {
   position: relative;
   z-index: 4;
-  min-width: 200px;
-  height: 80px;
+  width: 350px;
+  min-width: 30vw;
+  height: 120px;
   overflow: hidden;
   -webkit-transition: all 350ms;
   transition: all 350ms;
@@ -3030,32 +3062,24 @@ footer .second-footer-row .social-footer-container a:first-of-type {
 
 @media screen and (max-width: 600px) {
   .main-page main #reviews .comment {
-    height: 80px;
+    width: 220px;
   }
 }
 
 .main-page main #reviews .comment p {
-  position: relative;
-  font-size: 1rem;
-  color: #141414;
-  font-weight: 500;
-  height: 100%;
-  margin: 0 0 5vh 0;
+  position: absolute;
+  height: 120px;
+  font-size: clamp(0.7rem, 2vw, 1vw);
 }
 
-@media screen and (max-width: 970px) {
-  .main-page main #reviews .comment p {
-    -webkit-transition-delay: 500ms;
-            transition-delay: 500ms;
-    font-size: 0.9rem;
-  }
+.main-page main #reviews .comment p.first-comment {
+  top: 0;
+  left: 0;
 }
 
-@media screen and (max-width: 600px) {
-  .main-page main #reviews .comment p {
-    margin: 0 0 0vh 0;
-    font-size: 0.65rem;
-  }
+.main-page main #reviews .comment p.second-comment {
+  top: 100%;
+  left: 0;
 }
 
 .main-page main #reviews .comment .move-to-zero {
